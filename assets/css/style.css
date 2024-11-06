@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: hsl(235, 18%, 26%);
+}
+
+h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 3.5rem;
+}
+
+a {
+  color: hsl(4, 100%, 67%);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+p span {
+  font-weight: 700;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: row;
+  max-width: 1024px;
+  gap: 1.25rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  padding: 4rem 0 4rem 4rem;
+}
+
+article,
+aside {
+  width: 50%;
+}
+
+aside {
+  display: flex;
+  justify-content: flex-end;
+}
+
+aside picture {
+  max-width: 100%;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+}
+
+.above-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form,
+input,
+button,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+label {
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-msg {
+  color: hsl(4, 100%, 67%);
+  display: none;
+}
+
+input,
+button,
+.button {
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid hsl(231, 7%, 60%);
+}
+
+.text-tomato::placeholder {
+  color: hsl(4, 100%, 67%);
+}
+
+button,
+.button {
+  background-color: hsl(234, 29%, 20%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover,
+.button:hover {
+  background: rgb(255, 87, 149);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(255, 87, 149, 1) 0%,
+    rgba(255, 98, 87, 1) 50%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 87, 149, 1) 0%,
+    rgba(255, 98, 87, 1) 50%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 87, 149, 1) 0%,
+    rgba(255, 98, 87, 1) 50%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff5795",endColorstr="#ff6257",GradientType=1);
+  box-shadow: 0 5px 20px 5px hsla(4, 100%, 67%, 0.5);
+}
+
+footer {
+  color: #fff;
+  padding-bottom: 2rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+/* Succes/Error Msg */
+
+.success-msg-container {
+  background-color: #fff;
+  border-radius: 2rem;
+  display: flex;
+  max-width: 480px;
+  gap: 2rem;
+  padding: 3rem;
+  display: none;
+}
+
+.msg-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 0;
+    border-radius: 0;
+  }
+
+  article {
+    order: 2;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    width: 100%;
+  }
+
+  aside {
+    order: 1;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  article,
+  aside {
+    width: 100%;
+  }
+
+  aside picture {
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  picture img {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .success-msg-container {
+    border-radius: 0;
+  }
+}
